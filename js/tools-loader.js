@@ -13,7 +13,7 @@
    Omita para mostrar todas as ferramentas (página /ferramentas/).
    ============================================================ */
 (function () {
-  var DATA_URL = "https://cdn.jsdelivr.net/gh/almeidaoffsec/design-system@main/data/tools.json";
+  var DATA_URL = "https://cdn.jsdelivr.net/gh/almeidaoffsec/design-system@0ddce44cebe4e1c6971eee25e820d52d09af2a6a/data/tools.json";
 
   function badgeClass(severity) {
     var map = { critical: "badge--critical", medium: "badge--medium", low: "badge--low", info: "badge--info" };
