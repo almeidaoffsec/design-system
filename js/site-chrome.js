@@ -20,11 +20,11 @@
   var ASSETS_BASE = "https://cdn.jsdelivr.net/gh/almeidaoffsec/design-system@main/assets";
 
   var NAV_LINKS = [
-    { key: "home",     label: "Home",        href: "https://almeidaoffsec.com.br/" },
-    { key: "tools",    label: "Ferramentas", href: "https://almeidaoffsec.com.br/ferramentas/" },
-    { key: "writeups", label: "Writeups",    href: "https://writeups.almeidaoffsec.com.br/" },
-    { key: "blog",     label: "Blog",        href: "https://blog.almeidaoffsec.com.br/" },
-    { key: "about",    label: "Sobre",       href: "https://almeidaoffsec.com.br/sobre.html" }
+    { key: "home",     label: "Home",        href: "https://almeidaoffsec.com/" },
+    { key: "tools",    label: "Ferramentas", href: "https://almeidaoffsec.com/ferramentas/" },
+    { key: "writeups", label: "Writeups",    href: "https://writeups.almeidaoffsec.com/" },
+    { key: "blog",     label: "Blog",        href: "https://blog.almeidaoffsec.com/" },
+    { key: "about",    label: "Sobre",       href: "https://almeidaoffsec.com/sobre.html" }
   ];
 
   var SOCIAL_LINKS = {
@@ -48,7 +48,7 @@
     el.outerHTML =
       '<header class="site-header">' +
         '<div class="container">' +
-          '<a class="logo" href="https://almeidaoffsec.com.br/">' +
+          '<a class="logo" href="https://almeidaoffsec.com/">' +
             '<img src="' + ASSETS_BASE + '/logo-light.svg" alt="almeidaoffsec">' +
           '</a>' +
           '<nav class="site-nav" id="site-nav">' +
@@ -83,9 +83,9 @@
         '<div class="container">' +
           '<span class="site-footer__copy">&copy; ' + year + ' almeidaoffsec — Offensive Security</span>' +
           '<ul class="site-footer__links">' +
-            '<li><a href="https://almeidaoffsec.com.br/ferramentas/">Ferramentas</a></li>' +
-            '<li><a href="https://writeups.almeidaoffsec.com.br/">Writeups</a></li>' +
-            '<li><a href="https://blog.almeidaoffsec.com.br/">Blog</a></li>' +
+            '<li><a href="https://almeidaoffsec.com/ferramentas/">Ferramentas</a></li>' +
+            '<li><a href="https://writeups.almeidaoffsec.com/">Writeups</a></li>' +
+            '<li><a href="https://blog.almeidaoffsec.com/">Blog</a></li>' +
           '</ul>' +
           '<div class="site-footer__social">' +
             '<a href="' + SOCIAL_LINKS.linkedin + '" aria-label="LinkedIn" target="_blank" rel="noopener">' + ICON_LINKEDIN + '</a>' +
