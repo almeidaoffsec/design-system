@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Exemplo Tool",
+    "slug": "exemplo-tool",
+    "description": "Substitua por uma frase curta do problema real que a ferramenta resolve.",
+    "tags": ["Recon", "Python"],
+    "url": "https://exemplo-tool.almeidaoffsec.com.br/",
+    "repo": "https://github.com/almeidaoffsec/exemplo-tool",
+    "severity": "info"
+  }
+]

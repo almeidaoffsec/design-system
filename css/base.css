@@ -1,0 +1,104 @@
+/* ============================================================
+   almeidaoffsec — design-system / base.css
+   Reset, variáveis de marca e tipografia.
+   Fonte da verdade: almeidaoffsec_frontend_guide.md
+   ============================================================ */
+
+/* ---------- Reset mínimo ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img, svg { display: block; max-width: 100%; }
+ul, ol { margin: 0; padding: 0; }
+button { font: inherit; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- Variáveis de marca ---------- */
+:root {
+  /* Backgrounds */
+  --color-void:        #0A0E1A;
+  --color-deep-navy:   #0D1B2A;
+  --color-canvas:      #F7F9FC;
+  --color-signal:      #EAECF0;
+
+  /* Primárias */
+  --color-scan-blue:   #4A9EFF;
+  --color-terminal:    #00E5C8;
+
+  /* Estado / alerta */
+  --color-vuln-red:    #FF4D6D;
+  --color-warning:     #FFB347;
+  --color-access-ok:   #39D353;
+  --color-recon:       #7B61FF;
+
+  /* Texto */
+  --color-text-primary:   #EAECF0;
+  --color-text-secondary: #8A96A8;
+  --color-text-muted:     #4A5568;
+
+  /* Tipografia */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-code:    'JetBrains Mono', monospace;
+
+  /* Transições */
+  --transition-fast:   0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow:   0.4s ease;
+}
+
+.theme-light {
+  --color-void:            #F7F9FC;
+  --color-deep-navy:       #EAECF0;
+  --color-text-primary:    #0D1B2A;
+  --color-text-secondary:  #4A5568;
+}
+
+/* ---------- Base ---------- */
+body {
+  background: var(--color-void);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: var(--font-display); margin: 0 0 1rem; }
+h1 { font-size: 2.5rem;  font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-size: 1.25rem; font-weight: 500; }
+
+p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--color-scan-blue);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+a:hover { color: var(--color-terminal); }
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
