@@ -7,5 +7,14 @@
     "url": "https://amnesiapg.almeidaoffsec.com/",
     "repo": "https://github.com/almeidaoffsec/AmnesiaPassGenerator",
     "severity": "info"
+  },
+  {
+    "name": "Free QR-Code Generator",
+    "slug": "Free-QR-Generator",
+    "description": "Gerador de QR code personalizavel com histórico de QRs gerado. Sem propagandas",
+    "tags": ["HTML", "CSS", "JS" ],
+    "url": "https://freeqr.almeidaoffsec.com/",
+    "repo": "https://github.com/almeidaoffsec/freeqrcode-generator",
+    "severity": "info"
   }
 ]
