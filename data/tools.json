@@ -16,5 +16,14 @@
     "url": "https://freeqr.almeidaoffsec.com/",
     "repo": "https://github.com/almeidaoffsec/freeqrcode-generator",
     "severity": "info"
+  },
+  { 
+    "name": "Lockit - Crypt & Decrypt",
+    "slug": "Lockit",
+    "description": "Aplicação para encriptar e desencriptar texto ou arquivos para compartilhamento/armazenamento seguro.",
+    "tags": ["HTML", "CSS", "JS"],
+    "url": "https://lockit.almeidaoffsec.com/",
+    "repo": "https://github.com/almeidaoffsec/lockit",
+    "severity": "info"
   }
 ]
