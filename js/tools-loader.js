@@ -15,6 +15,16 @@
 (function () {
   var DATA_URL = "https://cdn.jsdelivr.net/gh/almeidaoffsec/design-system@main/data/tools.json";
 
+  function isInternal(url) {
+    try {
+      var host = new URL(url).hostname;
+      return host === "almeidaoffsec.com" ||
+             host.endsWith(".almeidaoffsec.com") ||
+             host === "almeidaoffsec.github.io" ||
+             host.endsWith(".almeidaoffsec.github.io");
+    } catch (e) { return false; }
+  }
+
   function badgeClass(severity) {
     var map = { critical: "badge--critical", medium: "badge--medium", low: "badge--low", info: "badge--info" };
     return map[severity] || "badge--info";
@@ -24,13 +34,14 @@
     var tagsHtml = (tool.tags || [])
       .map(function (t) { return '<span class="badge ' + badgeClass(tool.severity) + '">' + t + "</span>"; })
       .join("");
+    var toolTarget = isInternal(tool.url) ? "" : ' target="_blank" rel="noopener"';
     return (
       '<div class="card">' +
         "<h3>" + tool.name + "</h3>" +
         "<p>" + tool.description + "</p>" +
         '<div class="tags">' + tagsHtml + "</div>" +
         '<div class="hero__actions" style="margin-top:1.25rem;">' +
-          '<a class="btn-primary" href="' + tool.url + '" target="_blank" rel="noopener">Ver ferramenta</a>' +
+          '<a class="btn-primary" href="' + tool.url + '"' + toolTarget + '>Ver ferramenta</a>' +
           '<a class="btn-secondary" href="' + tool.repo + '" target="_blank" rel="noopener">Repositório</a>' +
         "</div>" +
       "</div>"
