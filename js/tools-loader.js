@@ -52,8 +52,9 @@
     var container = document.getElementById("tools-grid");
     if (!container) return;
     var limit = parseInt(container.getAttribute("data-limit"), 10);
+    var url = container.getAttribute("data-src") || DATA_URL;
 
-    fetch(DATA_URL)
+    fetch(url)
       .then(function (res) { return res.json(); })
       .then(function (tools) {
         var list = isNaN(limit) ? tools : tools.slice(0, limit);

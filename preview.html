@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System Preview — almeidaoffsec</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Assets locais — sem CDN -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+</head>
+<body data-page="home">
+
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="label">Preview · Design System</span>
+      <h1>Sandbox local de componentes.</h1>
+      <p>Esta página carrega CSS e JS diretamente do diretório local — sem CDN. Use-a para ver alterações em tempo real antes de fazer push.</p>
+      <div class="hero__actions">
+        <a class="btn-primary" href="#">Botão primário</a>
+        <a class="btn-secondary" href="#">Botão secundário</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BADGES -->
+  <section>
+    <div class="container">
+      <span class="label">Componentes</span>
+      <h2>Badges</h2>
+      <div style="display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
+        <span class="badge badge--critical">Critical</span>
+        <span class="badge badge--medium">Medium</span>
+        <span class="badge badge--low">Low</span>
+        <span class="badge badge--info">Info</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS -->
+  <section>
+    <div class="container">
+      <h2>Cards</h2>
+      <div class="grid-3">
+        <div class="card">
+          <span class="badge badge--critical">Critical</span>
+          <h3>Card de exemplo</h3>
+          <p>Descrição curta do problema que esta ferramenta resolve.</p>
+          <div class="hero__actions" style="margin-top:1.25rem;">
+            <a class="btn-primary" href="#">Ver ferramenta</a>
+            <a class="btn-secondary" href="#">Repositório</a>
+          </div>
+        </div>
+        <div class="card">
+          <span class="badge badge--medium">Medium</span>
+          <h3>Outro card</h3>
+          <p>Descrição curta do problema que esta ferramenta resolve.</p>
+          <div class="hero__actions" style="margin-top:1.25rem;">
+            <a class="btn-primary" href="#">Ver ferramenta</a>
+            <a class="btn-secondary" href="#">Repositório</a>
+          </div>
+        </div>
+        <div class="card">
+          <span class="badge badge--info">Info</span>
+          <h3>Mais um card</h3>
+          <p>Descrição curta do problema que esta ferramenta resolve.</p>
+          <div class="hero__actions" style="margin-top:1.25rem;">
+            <a class="btn-primary" href="#">Ver ferramenta</a>
+            <a class="btn-secondary" href="#">Repositório</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS (carregado do tools.json local) -->
+  <section>
+    <div class="container">
+      <span class="label">Catálogo</span>
+      <h2>Ferramentas (tools.json local)</h2>
+      <div id="tools-grid" class="grid-3" data-src="./data/tools.json"></div>
+    </div>
+  </section>
+
+  <!-- TIPOGRAFIA -->
+  <section>
+    <div class="container">
+      <span class="label">Tipografia</span>
+      <h2>Escala de títulos</h2>
+      <h1>Heading 1 — Space Grotesk</h1>
+      <h2>Heading 2 — Space Grotesk</h2>
+      <h3>Heading 3 — Space Grotesk</h3>
+      <p>Parágrafo — Inter. Texto corrido com tamanho e entrelinhamento padrão do sistema.</p>
+      <pre class="terminal-block">$ nmap -sV -p 80,443 alvo.com
+# Terminal block — JetBrains Mono</pre>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <!-- Scripts locais — sem CDN -->
+  <script src="./js/site-chrome.js"></script>
+  <script src="./js/tools-loader.js"></script>
+</body>
+</html>
