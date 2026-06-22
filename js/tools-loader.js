@@ -11,9 +11,17 @@
 
    data-limit (opcional): número máximo de cards exibidos.
    Omita para mostrar todas as ferramentas (página /ferramentas/).
+
+   Suporte bilíngue: description pode ser string (legado) ou
+   objeto { pt, en }. O idioma ativo é lido do localStorage.
    ============================================================ */
 (function () {
   var DATA_URL = "https://cdn.jsdelivr.net/gh/almeidaoffsec/design-system@main/data/tools.json";
+
+  var cachedTools     = null;
+  var cachedLimit     = NaN;
+  var cachedContainer = null;
+  var currentDict     = {};
 
   function isInternal(url) {
     try {
@@ -30,40 +38,65 @@
     return map[severity] || "badge--info";
   }
 
+  function getDescription(tool) {
+    if (typeof tool.description === "string") return tool.description;
+    var lang = localStorage.getItem("lang") || "pt-BR";
+    var key  = lang === "en" ? "en" : "pt";
+    return (tool.description && (tool.description[key] || tool.description.pt || tool.description.en)) || "";
+  }
+
+  function t(key, fallback) {
+    return currentDict[key] || fallback;
+  }
+
   function renderCard(tool) {
     var tagsHtml = (tool.tags || [])
-      .map(function (t) { return '<span class="badge ' + badgeClass(tool.severity) + '">' + t + "</span>"; })
+      .map(function (tag) { return '<span class="badge ' + badgeClass(tool.severity) + '">' + tag + "</span>"; })
       .join("");
     var toolTarget = isInternal(tool.url) ? "" : ' target="_blank" rel="noopener"';
     return (
       '<div class="card">' +
         "<h3>" + tool.name + "</h3>" +
-        "<p>" + tool.description + "</p>" +
+        "<p>" + getDescription(tool) + "</p>" +
         '<div class="tags">' + tagsHtml + "</div>" +
         '<div class="hero__actions" style="margin-top:1.25rem;">' +
-          '<a class="btn-primary" href="' + tool.url + '"' + toolTarget + '>Ver ferramenta</a>' +
-          '<a class="btn-secondary" href="' + tool.repo + '" target="_blank" rel="noopener">Repositório</a>' +
+          '<a class="btn-primary" href="' + tool.url + '"' + toolTarget + '>' + t("tool.card.cta", "Ver ferramenta") + '</a>' +
+          '<a class="btn-secondary" href="' + tool.repo + '" target="_blank" rel="noopener">' + t("tool.card.repo", "Repositório") + '</a>' +
         "</div>" +
       "</div>"
     );
   }
 
+  function render() {
+    if (!cachedContainer || !cachedTools) return;
+    var list = isNaN(cachedLimit) ? cachedTools : cachedTools.slice(0, cachedLimit);
+    cachedContainer.innerHTML = list.map(renderCard).join("");
+  }
+
   function init() {
-    var container = document.getElementById("tools-grid");
-    if (!container) return;
-    var limit = parseInt(container.getAttribute("data-limit"), 10);
-    var url = container.getAttribute("data-src") || DATA_URL;
+    cachedContainer = document.getElementById("tools-grid");
+    if (!cachedContainer) return;
+    cachedLimit = parseInt(cachedContainer.getAttribute("data-limit"), 10);
+    var url = cachedContainer.getAttribute("data-src") || DATA_URL;
 
     fetch(url)
       .then(function (res) { return res.json(); })
       .then(function (tools) {
-        var list = isNaN(limit) ? tools : tools.slice(0, limit);
-        container.innerHTML = list.map(renderCard).join("");
+        cachedTools = tools;
+        render();
       })
       .catch(function () {
-        container.innerHTML = '<p>Não foi possível carregar as ferramentas agora. Tente novamente mais tarde.</p>';
+        if (cachedContainer) {
+          cachedContainer.innerHTML = "<p>Não foi possível carregar as ferramentas agora. Tente novamente mais tarde.</p>";
+        }
       });
   }
+
+  /* Re-renderiza cards quando o idioma mudar */
+  document.addEventListener("i18n:ready", function (e) {
+    currentDict = (e.detail && e.detail.dict) || {};
+    render();
+  });
 
   document.addEventListener("DOMContentLoaded", init);
 })();

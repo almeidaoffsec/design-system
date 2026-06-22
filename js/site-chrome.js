@@ -48,7 +48,7 @@
   function buildNavLinks(activeKey) {
     return NAV_LINKS.map(function (item) {
       var current = item.key === activeKey ? ' aria-current="page"' : "";
-      return '<li><a href="' + item.href + '"' + current + ">" + item.label + "</a></li>";
+      return '<li><a href="' + item.href + '"' + current + ' data-i18n="nav.' + item.key + '">' + item.label + "</a></li>";
     }).join("");
   }
 
@@ -67,6 +67,7 @@
               '<a href="' + SOCIAL_LINKS.github + '" aria-label="GitHub" target="_blank" rel="noopener">' + ICON_GITHUB + '</a>' +
               '<a href="' + SOCIAL_LINKS.linkedin + '" aria-label="LinkedIn" target="_blank" rel="noopener">' + ICON_LINKEDIN + '</a>' +
               '<a href="' + SOCIAL_LINKS.tryhackme + '" aria-label="TryHackMe" target="_blank" rel="noopener">' + ICON_TRYHACKME + '</a>' +
+              '<button class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>' +
             '</div>' +
           '</nav>' +
           '<button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">' +
@@ -76,11 +77,20 @@
       '</header>';
 
     var toggle = document.getElementById("nav-toggle");
-    var nav = document.getElementById("site-nav");
+    var nav    = document.getElementById("site-nav");
     if (toggle && nav) {
       toggle.addEventListener("click", function () {
         var isOpen = nav.classList.toggle("is-open");
         toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    }
+
+    var langToggle = document.getElementById("lang-toggle");
+    if (langToggle) {
+      langToggle.addEventListener("click", function () {
+        var current = localStorage.getItem("lang") || "pt-BR";
+        var next    = current === "en" ? "pt-BR" : "en";
+        if (window.i18n) window.i18n.setLang(next);
       });
     }
   }
@@ -94,9 +104,9 @@
         '<div class="container">' +
           '<span class="site-footer__copy">&copy; ' + year + ' almeidaoffsec — Offensive Security</span>' +
           '<ul class="site-footer__links">' +
-            '<li><a href="https://almeidaoffsec.com/ferramentas/">Ferramentas</a></li>' +
-            '<li><a href="https://writeups.almeidaoffsec.com/">Writeups</a></li>' +
-            '<li><a href="https://blog.almeidaoffsec.com/">Blog</a></li>' +
+            '<li><a href="https://almeidaoffsec.com/ferramentas/" data-i18n="footer.link.tools">Ferramentas</a></li>' +
+            '<li><a href="https://writeups.almeidaoffsec.com/" data-i18n="footer.link.writeups">Writeups</a></li>' +
+            '<li><a href="https://blog.almeidaoffsec.com/" data-i18n="footer.link.blog">Blog</a></li>' +
           '</ul>' +
           '<div class="site-footer__social">' +
             '<a href="' + SOCIAL_LINKS.github + '" aria-label="GitHub" target="_blank" rel="noopener">' + ICON_GITHUB + '</a>' +
@@ -110,6 +120,15 @@
         '</div>' +
       '</footer>';
   }
+
+  /* Atualiza label do toggle e aria-label quando i18n:ready disparar */
+  document.addEventListener("i18n:ready", function (e) {
+    var toggle = document.getElementById("lang-toggle");
+    if (!toggle) return;
+    var label = e.detail.lang === "en" ? "PT" : "EN";
+    toggle.textContent = label;
+    toggle.setAttribute("aria-label", "Switch to " + (e.detail.lang === "en" ? "Portuguese" : "English"));
+  });
 
   document.addEventListener("DOMContentLoaded", function () {
     var activeKey = document.body.getAttribute("data-page") || "home";

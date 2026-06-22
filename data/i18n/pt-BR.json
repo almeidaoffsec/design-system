@@ -1,0 +1,24 @@
+{
+  "nav.home":     "Home",
+  "nav.tools":    "Ferramentas",
+  "nav.writeups": "Writeups",
+  "nav.blog":     "Blog",
+  "nav.about":    "Sobre",
+
+  "footer.link.tools":    "Ferramentas",
+  "footer.link.writeups": "Writeups",
+  "footer.link.blog":     "Blog",
+
+  "lang.toggle": "EN",
+
+  "tool.hero.label":               "Ferramenta",
+  "tool.cta.github":               "Ver código no GitHub",
+  "tool.section.context.label":    "Contexto",
+  "tool.section.context.heading":  "O problema que resolve",
+  "tool.section.usage.label":      "Uso",
+  "tool.section.usage.heading":    "Como usar",
+  "tool.section.stack.label":      "Stack",
+  "tool.section.stack.heading":    "Tecnologias",
+  "tool.card.cta":                 "Ver ferramenta",
+  "tool.card.repo":                "Repositório"
+}

@@ -2,8 +2,11 @@
   {
     "name": "Amnesia Password Generator",
     "slug": "Amnesia-Pass-Gen",
-    "description": "Gerador de senhas deterministico. O segredo para lembrar de dezenas de senhas",
-    "tags": ["ShellScript", "HTML", "CSS", "JS" ],
+    "description": {
+      "pt": "Gerador de senhas deterministico. O segredo para lembrar de dezenas de senhas",
+      "en": "Deterministic password generator. The secret to remembering dozens of passwords"
+    },
+    "tags": ["ShellScript", "HTML", "CSS", "JS"],
     "url": "https://amnesiapg.almeidaoffsec.com/",
     "repo": "https://github.com/almeidaoffsec/AmnesiaPassGenerator",
     "severity": "info"
@@ -11,16 +14,22 @@
   {
     "name": "Free QR-Code Generator",
     "slug": "Free-QR-Generator",
-    "description": "Gerador de QR code personalizavel com histórico de QRs gerado. Sem propagandas",
-    "tags": ["HTML", "CSS", "JS" ],
+    "description": {
+      "pt": "Gerador de QR code personalizavel com histórico de QRs gerado. Sem propagandas",
+      "en": "Customizable QR code generator with generation history. No ads"
+    },
+    "tags": ["HTML", "CSS", "JS"],
     "url": "https://freeqr.almeidaoffsec.com/",
     "repo": "https://github.com/almeidaoffsec/freeqrcode-generator",
     "severity": "info"
   },
-  { 
+  {
     "name": "Lockit - Crypt & Decrypt",
     "slug": "Lockit",
-    "description": "Aplicação para encriptar e desencriptar texto ou arquivos para compartilhamento/armazenamento seguro.",
+    "description": {
+      "pt": "Aplicação para encriptar e desencriptar texto ou arquivos para compartilhamento/armazenamento seguro.",
+      "en": "Application to encrypt and decrypt text or files for secure sharing and storage."
+    },
     "tags": ["HTML", "CSS", "JS"],
     "url": "https://lockit.almeidaoffsec.com/",
     "repo": "https://github.com/almeidaoffsec/lockit",
