@@ -20,5 +20,7 @@
   "tool.section.stack.label":      "Stack",
   "tool.section.stack.heading":    "Technologies",
   "tool.card.cta":                 "View tool",
-  "tool.card.repo":                "Repository"
+  "tool.card.repo":                "Repository",
+
+  "tool.optional":                 "(optional)"
 }

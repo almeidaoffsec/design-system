@@ -66,6 +66,6 @@
   window.i18n = { setLang: setLang, detectLang: detectLang };
 
   document.addEventListener("DOMContentLoaded", function () {
-    load(detectLang());
+    setLang(detectLang());
   });
 })();
