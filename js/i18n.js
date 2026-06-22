@@ -23,8 +23,7 @@
   function detectLang() {
     var stored = localStorage.getItem("lang");
     if (stored && SUPPORTED.indexOf(stored) !== -1) return stored;
-    var nav = (navigator.language || "").slice(0, 2);
-    return nav === "en" ? "en" : DEFAULT;
+    return DEFAULT;
   }
 
   function load(lang) {
