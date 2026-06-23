@@ -22,5 +22,7 @@
   "tool.card.cta":                 "Ver ferramenta",
   "tool.card.repo":                "Repositório",
 
-  "tool.optional":                 "(opcional)"
+  "tool.optional":                 "(opcional)",
+
+  "writeup.card.cta":              "Ler writeup →"
 }
