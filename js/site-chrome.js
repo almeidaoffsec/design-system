@@ -21,9 +21,9 @@
 
   var NAV_LINKS = [
     { key: "home",     label: "Home",        href: "https://almeidaoffsec.com/" },
-    { key: "tools",    label: "Projetos",    href: "https://almeidaoffsec.com/projetos/" },
     { key: "writeups", label: "Writeups",    href: "https://writeups.almeidaoffsec.com/" },
     { key: "blog",     label: "Blog",        href: "https://blog.almeidaoffsec.com/" },
+    { key: "tools",    label: "Projetos",    href: "https://almeidaoffsec.com/projetos/" },
     { key: "about",    label: "Sobre",       href: "https://almeidaoffsec.com/sobre.html" }
   ];
 
