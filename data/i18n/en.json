@@ -1,17 +1,17 @@
 {
   "nav.home":     "Home",
-  "nav.tools":    "Tools",
+  "nav.tools":    "Projects",
   "nav.writeups": "Writeups",
   "nav.blog":     "Blog",
   "nav.about":    "About",
 
-  "footer.link.tools":    "Tools",
+  "footer.link.tools":    "Projects",
   "footer.link.writeups": "Writeups",
   "footer.link.blog":     "Blog",
 
   "lang.toggle": "PT",
 
-  "tool.hero.label":               "Tool",
+  "tool.hero.label":               "Project",
   "tool.cta.github":               "View code on GitHub",
   "tool.section.context.label":    "Context",
   "tool.section.context.heading":  "The problem it solves",
@@ -19,7 +19,7 @@
   "tool.section.usage.heading":    "How to use",
   "tool.section.stack.label":      "Stack",
   "tool.section.stack.heading":    "Technologies",
-  "tool.card.cta":                 "View tool",
+  "tool.card.cta":                 "View project",
   "tool.card.repo":                "Repository",
 
   "tool.optional":                 "(optional)",
