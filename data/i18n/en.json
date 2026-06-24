@@ -24,5 +24,6 @@
 
   "tool.optional":                 "(optional)",
 
-  "writeup.card.cta":              "Read writeup →"
+  "writeup.card.cta":              "Read writeup →",
+  "post.card.cta":                 "Read post →"
 }

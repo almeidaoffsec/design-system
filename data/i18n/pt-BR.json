@@ -24,5 +24,6 @@
 
   "tool.optional":                 "(opcional)",
 
-  "writeup.card.cta":              "Ler writeup →"
+  "writeup.card.cta":              "Ler writeup →",
+  "post.card.cta":                 "Ler post →"
 }
