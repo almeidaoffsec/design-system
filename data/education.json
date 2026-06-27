@@ -8,7 +8,7 @@
       "pt": "Breve descrição do curso e do que foi aprendido.",
       "en": "Brief description of the course and what was learned."
     },
-    "tags": ["Tag1", "Tag2"],
+    "tags": ["InfoGaethering", "Web Hacking", "OSINT", "Network Analisys", "Exploitation & Post Exploitation", "SO Hacking (Windows & Linux)"],
     "logo": "assets/education/desec.png",
     "url": "https://desecsecurity.com/formacao"
   }
