@@ -32,6 +32,41 @@ for arg in "$@"; do
     continue
   fi
   case "$arg" in
+    --help|-h)
+      cat <<'EOF'
+purge-cdn.sh — Purga o cache do jsDelivr para arquivos do design-system.
+
+USO:
+  ./purge-cdn.sh                                    Menu interativo de seleção
+  ./purge-cdn.sh --all                              Purga todos os arquivos
+  ./purge-cdn.sh --files <arq1> [<arq2> ...]        Purga arquivos específicos
+  ./purge-cdn.sh --dry-run                          Preview das URLs sem purgar
+  ./purge-cdn.sh [REF]                              Purga usando tag ou branch (padrão: main)
+
+FLAGS:
+  --all                   Purga todos os arquivos em css/, js/, data/ e assets/
+  --files <arq> ...       Lista de caminhos relativos à raiz do repo (após a flag)
+  --dry-run               Exibe as URLs que seriam purgadas sem fazer requisições
+  -h, --help              Exibe esta ajuda
+
+EXEMPLOS:
+  ./purge-cdn.sh
+  ./purge-cdn.sh --all
+  ./purge-cdn.sh --files js/education-loader.js data/education.json
+  ./purge-cdn.sh v1.0.0 --all
+  ./purge-cdn.sh --all --dry-run
+
+STATUS DOS ARQUIVOS:
+  [OK]          Purga bem-sucedida
+  [THROTTLED]   jsDelivr throttled — cache será limpo automaticamente no reset
+  [FAIL]        Falha após 3 tentativas (jsDelivr instável ou fora do ar)
+
+WORKAROUND (quando [FAIL]):
+  Substitua @main pelo hash do commit nas URLs do CDN:
+  https://cdn.jsdelivr.net/gh/almeidaoffsec/design-system@<hash>/<arquivo>
+EOF
+      exit 0
+      ;;
     --dry-run)  DRY_RUN=true ;;
     --all)      PURGE_ALL=true ;;
     --files)    PARSE_FILES=true ;;
@@ -100,6 +135,7 @@ echo "Ref: @${REF}  |  ${#FILES[@]} arquivo(s) a processar"
 echo "----------------------------------------"
 
 OK_COUNT=0
+THROTTLED_FILES=()
 FAIL_FILES=()
 
 for file in "${FILES[@]}"; do
@@ -111,33 +147,49 @@ for file in "${FILES[@]}"; do
   fi
 
   attempt=1
-  success=false
+  result=""
   while (( attempt <= MAX_RETRIES )); do
     response="$(curl -s -w '\n%{http_code}' "$URL")"
     http_code="$(echo "$response" | tail -n1)"
     body="$(echo "$response" | sed '$d')"
 
-    if [[ "$http_code" == "200" ]] && ! echo "$body" | grep -qi "error\|no available server\|throttled"; then
-      success=true
-      break
+    if [[ "$http_code" != "200" ]] || echo "$body" | grep -qi "error\|no available server"; then
+      echo "  tentativa ${attempt}/${MAX_RETRIES} falhou para ${file} (HTTP ${http_code}) — aguardando ${RETRY_DELAY}s"
+      attempt=$((attempt + 1))
+      sleep "$RETRY_DELAY"
+      continue
     fi
 
-    echo "  tentativa ${attempt}/${MAX_RETRIES} falhou para ${file} (HTTP ${http_code}) — aguardando ${RETRY_DELAY}s"
-    attempt=$((attempt + 1))
-    sleep "$RETRY_DELAY"
+    if echo "$body" | grep -qE '"throttled"\s*:\s*true'; then
+      reset="$(echo "$body" | grep -oE '"throttlingReset"\s*:\s*[0-9]+' | grep -oE '[0-9]+')"
+      result="throttled${reset:+ (reset em ${reset}s)}"
+    else
+      result="ok"
+    fi
+    break
   done
 
-  if $success; then
-    echo "[OK]   $file"
-    OK_COUNT=$((OK_COUNT + 1))
-  else
-    echo "[FAIL] $file"
-    FAIL_FILES+=("$file")
-  fi
+  case "$result" in
+    ok)
+      echo "[OK]        $file"
+      OK_COUNT=$((OK_COUNT + 1))
+      ;;
+    throttled*)
+      echo "[THROTTLED] $file${result#throttled}"
+      OK_COUNT=$((OK_COUNT + 1))
+      THROTTLED_FILES+=("$file")
+      ;;
+    *)
+      echo "[FAIL]      $file"
+      FAIL_FILES+=("$file")
+      ;;
+  esac
 done
 
 echo "----------------------------------------"
-echo "Sucesso: ${OK_COUNT}/${#FILES[@]}"
+suffix=""
+[[ ${#THROTTLED_FILES[@]} -gt 0 ]] && suffix=" (${#THROTTLED_FILES[@]} throttled — cache limpo automaticamente pelo jsDelivr)"
+echo "Sucesso: ${OK_COUNT}/${#FILES[@]}${suffix}"
 
 if [[ ${#FAIL_FILES[@]} -gt 0 ]]; then
   echo ""

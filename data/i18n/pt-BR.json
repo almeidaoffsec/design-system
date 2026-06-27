@@ -32,5 +32,12 @@
   "education.status.completed":    "Concluído",
   "education.status.in_progress":  "Em andamento",
   "education.card.org":            "Ver organização →",
-  "education.card.cta":            "Ver certificado →"
+  "education.card.cta":            "Ver certificado →",
+
+  "experience.section.label":      "Experiência",
+  "experience.section.heading":    "Experiência",
+  "experience.status.active":      "Ativo",
+  "experience.status.former":      "Anterior",
+  "experience.card.org":           "Ver plataforma →",
+  "experience.card.cta":           "Ver perfil →"
 }
