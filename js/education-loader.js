@@ -18,6 +18,7 @@
      "description":  { "pt": "...", "en": "..." },
      "tags":         ["Tag1", "Tag2"],
      "logo":         "assets/education/org.svg" | null,
+     "org_url":      "https://..." | null,
      "url":          "https://..." | null
    }
    ============================================================ */
@@ -52,11 +53,17 @@
       .map(function (tag) { return '<span class="badge badge--info">' + tag + "</span>"; })
       .join("");
 
-    var ctaHtml = entry.url
-      ? '<a class="btn-secondary" href="' + entry.url + '" target="_blank" rel="noopener">' +
-          t("education.card.cta", "Ver certificado →") +
-        "</a>"
-      : "";
+    var ctaHtml =
+      (entry.org_url
+        ? '<a class="btn-secondary" href="' + entry.org_url + '" target="_blank" rel="noopener">' +
+            t("education.card.org", "Ver organização →") +
+          "</a>"
+        : "") +
+      (entry.url
+        ? '<a class="btn-secondary" href="' + entry.url + '" target="_blank" rel="noopener">' +
+            t("education.card.cta", "Ver certificado →") +
+          "</a>"
+        : "");
 
     var metaHtml =
       '<div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">' +
@@ -69,14 +76,14 @@
       "<h3>" + entry.title + "</h3>" +
       "<p>" + getDescription(entry) + "</p>" +
       (tagsHtml ? '<div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin:1rem 0;">' + tagsHtml + "</div>" : "") +
-      ctaHtml;
+      (ctaHtml ? '<div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">' + ctaHtml + "</div>" : "");
 
     if (entry.logo) {
       return (
         '<div class="card" style="padding:0;overflow:hidden;">' +
-          '<div style="background:var(--color-void);display:flex;align-items:center;justify-content:center;padding:2rem;min-height:9rem;">' +
+          '<div style="background:var(--color-void);display:flex;align-items:center;justify-content:center;padding:2rem;min-height:12rem;">' +
             '<img src="' + ASSETS_BASE + "/" + entry.logo + '" alt="' + entry.organization + '" ' +
-              'style="max-height:5rem;max-width:100%;object-fit:contain;">' +
+              'style="max-height:8rem;max-width:80%;object-fit:contain;">' +
           "</div>" +
           '<div style="padding:1.5rem;">' + bodyHtml + "</div>" +
         "</div>"

@@ -31,5 +31,6 @@
   "education.section.heading":     "Education",
   "education.status.completed":    "Completed",
   "education.status.in_progress":  "In progress",
+  "education.card.org":            "View organization →",
   "education.card.cta":            "View certificate →"
 }
