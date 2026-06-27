@@ -8,7 +8,7 @@
       "pt": "Formação prática em segurança ofensiva com foco em metodologia de testes de invasão, cobrindo reconhecimento, exploração de vulnerabilidades web, escalada de privilégios e geração de relatórios profissionais.",
       "en": "Hands-on training in offensive security covering penetration testing methodology, web vulnerability exploitation, privilege escalation, and professional report writing."
     },
-    "tags": ["Information Gathering", "Web Hacking (OWASP)", "OSINT", "Network Analysis", "Exploitation & Post Exploitation", "OS Hacking (Windows & Linux), Hashes and Brute Force,Vulnerability Reporting, CTF & Labs"],
+    "tags": ["Information Gathering", "Web Hacking (OWASP)", "OSINT", "Network Analysis", "Exploitation & Post Exploitation", "OS Hacking (Windows & Linux)", "Hashes and Brute Force", "Vulnerability Reporting", "CTF & Labs"],
     "logo": "assets/education/desec.png",
     "org_url": "https://desecsecurity.com/formacao",
     "url": null
