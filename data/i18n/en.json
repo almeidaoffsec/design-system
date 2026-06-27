@@ -25,5 +25,11 @@
   "tool.optional":                 "(optional)",
 
   "writeup.card.cta":              "Read writeup →",
-  "post.card.cta":                 "Read post →"
+  "post.card.cta":                 "Read post →",
+
+  "education.section.label":       "Education",
+  "education.section.heading":     "Education",
+  "education.status.completed":    "Completed",
+  "education.status.in_progress":  "In progress",
+  "education.card.cta":            "View certificate →"
 }

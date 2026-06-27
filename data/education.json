@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Exemplo: Curso de Segurança Ofensiva",
+    "organization": "Organização",
+    "duration": "220 horas",
+    "status": "completed",
+    "description": {
+      "pt": "Breve descrição do curso e do que foi aprendido.",
+      "en": "Brief description of the course and what was learned."
+    },
+    "tags": ["Tag1", "Tag2"],
+    "logo": null,
+    "url": null
+  }
+]
