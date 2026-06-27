@@ -1,15 +1,15 @@
 [
   {
-    "title": "Exemplo: Curso de Segurança Ofensiva",
-    "organization": "Organização",
-    "duration": "220 horas",
+    "title": "Pentest Profissional",
+    "organization": "DESEC Information Security",
+    "duration": "+500 Aulas - +200 Labs",
     "status": "completed",
     "description": {
       "pt": "Breve descrição do curso e do que foi aprendido.",
       "en": "Brief description of the course and what was learned."
     },
     "tags": ["Tag1", "Tag2"],
-    "logo": assets/logo-dark.svg,
-    "url": null
+    "logo": "assets/education/desec.png",
+    "url": "https://desecsecurity.com/formacao"
   }
 ]
