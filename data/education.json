@@ -11,13 +11,13 @@
     "tags": ["Information Gathering", "Web Hacking (OWASP)", "OSINT", "Network Analysis", "Exploitation & Post Exploitation", "OS Hacking (Windows & Linux), Hashes and Brute Force,Vulnerability Reporting, CTF & Labs"],
     "logo": "assets/education/desec.png",
     "org_url": "https://desecsecurity.com/formacao",
-    "url": 
+    "url": null
   },
   {
     "title": "DevOps - Post Graduation",
     "organization": "Estácio",
     "duration": "2026.1 - Present",
-    "status": "in progress",
+    "status": "in-progress",
     "description": {
       "pt": "Pós-graduação com foco em cultura DevOps, automação de pipelines CI/CD, infraestrutura como código, containerização e práticas de entrega contínua em ambientes de produção.",
       "en": "Post-graduate program focused on DevOps culture, CI/CD pipeline automation, infrastructure as code, containerization, and continuous delivery practices in production environments."
@@ -25,7 +25,7 @@
     "tags": ["CI/CD", "Infrastructure as Code", "Docker & Kubernetes", "Automation", "Cloud Computing", "Linux", "Agile & Scrum"],
     "logo": "assets/education/estacio.svg",
     "org_url": "https://estacio.br",
-    "url": ""
+    "url": null
   },
   {
     "title": "Cybersecurity Defense",
@@ -39,6 +39,6 @@
     "tags": ["Network Security", "Malware Analysis", "Vulnerability Management", "Computer Forensics", "Cloud Security", "Web Security", "Linux", "Windows"],
     "logo": "assets/education/estacio.svg",
     "org_url": "https://estacio.br",
-    "url": ""
+    "url": null
   }
 ]
