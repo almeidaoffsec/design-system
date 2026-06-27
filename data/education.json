@@ -9,7 +9,7 @@
       "en": "Brief description of the course and what was learned."
     },
     "tags": ["Tag1", "Tag2"],
-    "logo": null,
+    "logo": assets/logo-dark.svg,
     "url": null
   }
 ]
