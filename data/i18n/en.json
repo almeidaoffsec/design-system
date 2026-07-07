@@ -1,17 +1,17 @@
 {
   "nav.home":     "Home",
-  "nav.tools":    "Tools",
+  "nav.tools":    "Projects",
   "nav.writeups": "Writeups",
   "nav.blog":     "Blog",
   "nav.about":    "About",
 
-  "footer.link.tools":    "Tools",
+  "footer.link.tools":    "Projects",
   "footer.link.writeups": "Writeups",
   "footer.link.blog":     "Blog",
 
   "lang.toggle": "PT",
 
-  "tool.hero.label":               "Tool",
+  "tool.hero.label":               "Project",
   "tool.cta.github":               "View code on GitHub",
   "tool.section.context.label":    "Context",
   "tool.section.context.heading":  "The problem it solves",
@@ -19,10 +19,25 @@
   "tool.section.usage.heading":    "How to use",
   "tool.section.stack.label":      "Stack",
   "tool.section.stack.heading":    "Technologies",
-  "tool.card.cta":                 "View tool",
+  "tool.card.cta":                 "View project",
   "tool.card.repo":                "Repository",
 
   "tool.optional":                 "(optional)",
 
-  "writeup.card.cta":              "Read writeup →"
+  "writeup.card.cta":              "Read writeup →",
+  "post.card.cta":                 "Read post →",
+
+  "education.section.label":       "Education",
+  "education.section.heading":     "Education",
+  "education.status.completed":    "Completed",
+  "education.status.in_progress":  "In progress",
+  "education.card.org":            "View organization →",
+  "education.card.cta":            "View certificate →",
+
+  "experience.section.label":      "Experience",
+  "experience.section.heading":    "Experience",
+  "experience.status.active":      "Active",
+  "experience.status.former":      "Former",
+  "experience.card.org":           "View platform →",
+  "experience.card.cta":           "View profile →"
 }

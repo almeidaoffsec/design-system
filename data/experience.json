@@ -1,0 +1,170 @@
+[
+  {
+    "title": "AWS — Infraestrutura, Redes e DevOps",
+    "organization": "Amazon Web Services",
+    "duration": "Desde 2023",
+    "status": "active",
+    "description": {
+      "pt": "Provisionamento e gerenciamento de infraestrutura na nuvem AWS com foco em redes (VPC, subnets, security groups), serviços de compute (EC2, ECS), armazenamento (S3) e automação via Infrastructure as Code. Experiência em pipelines de CI/CD e ambientes multi-conta.",
+      "en": "Provisioning and management of cloud infrastructure on AWS, focusing on networking (VPC, subnets, security groups), compute services (EC2, ECS), storage (S3), and automation via Infrastructure as Code. Experience with CI/CD pipelines and multi-account environments."
+    },
+    "tags": ["AWS", "Cloud", "DevOps", "IaC", "VPC", "EC2", "CI/CD"],
+    "logo": "assets/experience/aws.svg",
+    "org_url": null,
+    "url": null
+  },
+  {
+    "title": "Azure — Infraestrutura, Redes e DevOps",
+    "organization": "Microsoft Azure",
+    "duration": "Desde 2023",
+    "status": "active",
+    "description": {
+      "pt": "Gerenciamento de infraestrutura em nuvem Azure com experiência em redes virtuais, Active Directory, Azure DevOps e automação de ambientes. Implementação de soluções escaláveis com monitoramento integrado e controle de acesso baseado em funções (RBAC).",
+      "en": "Management of cloud infrastructure on Azure with experience in virtual networks, Active Directory, Azure DevOps, and environment automation. Implementation of scalable solutions with integrated monitoring and role-based access control (RBAC)."
+    },
+    "tags": ["Azure", "Cloud", "DevOps", "Active Directory", "RBAC", "IaC", "CI/CD"],
+    "logo": "assets/experience/azure.svg",
+    "org_url": null,
+    "url": null
+  },
+  {
+    "title": "GLPI — Gestão de TI e Central de Serviços",
+    "organization": "Gestionnaire Libre de Parc Informatique",
+    "duration": "Desde 2025",
+    "status": "active",
+    "description": {
+      "pt": "Implantação, estruturação e administração da plataforma GLPI para gestão de ativos de TI e central de serviços. Configuração de fluxos de chamados, SLAs, inventário automatizado e integração com ambientes de rede corporativa.",
+      "en": "Deployment, configuration, and administration of the GLPI platform for IT asset management and service desk. Setup of ticketing workflows, SLAs, automated inventory, and integration with corporate network environments."
+    },
+    "tags": ["ITSM", "ITIL", "Asset Management", "Service Desk", "Help Desk"],
+    "logo": "assets/experience/glpi.svg",
+    "org_url": null,
+    "url": null
+  },
+  {
+    "title": "Zabbix — Monitoramento de Infraestrutura",
+    "organization": "Zabbix",
+    "duration": "Desde 2023",
+    "status": "active",
+    "description": {
+      "pt": "Implantação e administração da plataforma Zabbix para monitoramento de infraestrutura de TI. Configuração de hosts, templates, triggers e dashboards para visibilidade em tempo real de servidores, dispositivos de rede e serviços críticos.",
+      "en": "Deployment and administration of the Zabbix platform for IT infrastructure monitoring. Configuration of hosts, templates, triggers, and dashboards for real-time visibility into servers, network devices, and critical services."
+    },
+    "tags": ["Monitoramento", "Zabbix", "SNMP", "Infraestrutura", "Alertas", "Dashboards"],
+    "logo": "assets/experience/zabbix.svg",
+    "org_url": null,
+    "url": null
+  },
+  {
+    "title": "FortiGate, FortiManager e FortiAnalyser",
+    "organization": "Fortinet",
+    "duration": "Desde 2023",
+    "status": "active",
+    "description": {
+      "pt": "Implantação e gerenciamento de firewalls FortiGate com administração centralizada via FortiManager e análise de logs e eventos de segurança via FortiAnalyser. Configuração de políticas de segurança, VPNs, inspeção SSL e segmentação de redes.",
+      "en": "Deployment and management of FortiGate firewalls with centralized administration via FortiManager and security log/event analysis via FortiAnalyser. Configuration of security policies, VPNs, SSL inspection, and network segmentation."
+    },
+    "tags": ["Firewall", "NGFW", "VPN", "FortiGate", "Network Security", "SSL Inspection"],
+    "logo": "assets/experience/fortinet.svg",
+    "org_url": null,
+    "url": null
+  },
+  {
+    "title": "MikroTik — Roteamento e Switching",
+    "organization": "MikroTik",
+    "duration": "Desde 2022",
+    "status": "active",
+    "description": {
+      "pt": "Implantação e gerenciamento de roteadores e switches MikroTik em ambientes corporativos. Configuração de roteamento dinâmico, VLANs, VPNs, QoS e firewall via RouterOS, garantindo conectividade estável e segmentação eficiente de redes.",
+      "en": "Deployment and management of MikroTik routers and switches in corporate environments. Configuration of dynamic routing, VLANs, VPNs, QoS, and firewall via RouterOS, ensuring stable connectivity and efficient network segmentation."
+    },
+    "tags": ["MikroTik", "RouterOS", "VLAN", "VPN", "Roteamento", "QoS"],
+    "logo": "assets/experience/mikrotik.svg",
+    "org_url": null,
+    "url": null
+  },
+  {
+    "title": "Windows Server e Active Directory",
+    "organization": "Microsoft",
+    "duration": "Desde 2022",
+    "status": "active",
+    "description": {
+      "pt": "Implantação, estruturação e gerenciamento de ambientes Windows Server com Active Directory. Administração de GPOs, ingresso de máquinas no domínio, controle de acesso e permissionamento, com aplicação de hardening baseado em boas práticas de segurança.",
+      "en": "Deployment, configuration, and management of Windows Server environments with Active Directory. Administration of GPOs, domain joins, access control, permissions management, and hardening following security best practices."
+    },
+    "tags": ["Windows Server", "Active Directory", "GPO", "Hardening", "Domain", "LDAP"],
+    "logo": "assets/experience/windows-server.svg",
+    "org_url": null,
+    "url": null
+  },
+  {
+    "title": "Linux Server — Administração e Hardening",
+    "organization": null,
+    "duration": "Desde 2022",
+    "status": "active",
+    "description": {
+      "pt": "Implantação, configuração e gerenciamento de servidores Linux em ambientes de produção. Administração de serviços, controle de permissões, automação via shell script e aplicação de hardening orientado a segurança em distribuições como Ubuntu e CentOS/Rocky.",
+      "en": "Deployment, configuration, and management of Linux servers in production environments. Service administration, permissions management, automation via shell scripting, and security-focused hardening on distributions such as Ubuntu and CentOS/Rocky."
+    },
+    "tags": ["Linux", "Ubuntu", "CentOS", "Shell Script", "Hardening", "Segurança"],
+    "logo": "assets/experience/linux.svg",
+    "org_url": null,
+    "url": null
+  },
+  {
+    "title": "Grafana — Observabilidade e Dashboards",
+    "organization": "Grafana Labs",
+    "duration": "Desde 2024",
+    "status": "active",
+    "description": {
+      "pt": "Configuração e administração de dashboards Grafana para visualização de métricas de infraestrutura. Integração com fontes de dados como Zabbix e Prometheus, criação de alertas e painéis personalizados para operação e NOC.",
+      "en": "Configuration and administration of Grafana dashboards for infrastructure metrics visualization. Integration with data sources such as Zabbix and Prometheus, and creation of custom alerts and panels for operations and NOC teams."
+    },
+    "tags": ["Grafana", "Observabilidade", "Dashboards", "Prometheus", "Monitoramento", "NOC"],
+    "logo": "assets/experience/grafana.svg",
+    "org_url": null,
+    "url": null
+  },
+  {
+    "title": "Bancos de Dados Relacionais e NoSQL",
+    "organization": null,
+    "duration": "Desde 2022",
+    "status": "active",
+    "description": {
+      "pt": "Implantação e gerenciamento de bancos de dados relacionais e NoSQL em ambientes de produção. Experiência com PostgreSQL, MySQL, MariaDB e MongoDB — incluindo configuração, estratégias de backup, controle de acesso e otimização de performance.",
+      "en": "Deployment and management of relational and NoSQL databases in production environments. Experience with PostgreSQL, MySQL, MariaDB, and MongoDB — including configuration, backup strategies, access control, and performance optimization."
+    },
+    "tags": ["PostgreSQL", "MySQL", "MariaDB", "MongoDB", "NoSQL", "Banco de Dados"],
+    "logo": "assets/experience/databases.svg",
+    "org_url": null,
+    "url": null
+  },
+  {
+    "title": "Automações e Scripts — PowerShell, Shell e Python",
+    "organization": null,
+    "duration": "Desde 2022",
+    "status": "active",
+    "description": {
+      "pt": "Desenvolvimento de automações e scripts para operações de infraestrutura, redução de tarefas repetitivas e integração entre sistemas. Experiência com PowerShell para ambientes Windows/Active Directory, Shell Script para administração de servidores Linux e Python para automações mais complexas e integrações com APIs.",
+      "en": "Development of automation scripts for infrastructure operations, reduction of repetitive tasks, and system integration. Experience with PowerShell for Windows/Active Directory environments, Shell Script for Linux server administration, and Python for more complex automations and API integrations."
+    },
+    "tags": ["PowerShell", "Shell Script", "Python", "Automação", "Scripting", "DevOps"],
+    "logo": "assets/experience/scripting.svg",
+    "org_url": null,
+    "url": null
+  },
+  {
+    "title": "Projetos de Infraestrutura de Redes",
+    "organization": null,
+    "duration": "Desde 2022",
+    "status": "active",
+    "description": {
+      "pt": "Desenvolvimento e acompanhamento de projetos de infraestrutura de rede industrial e empresarial, assegurando disponibilidade, escalabilidade e eficiência operacional. Atuação no dimensionamento de topologias, seleção de equipamentos, documentação técnica e entrega de ambientes prontos para produção.",
+      "en": "Development and management of industrial and enterprise network infrastructure projects, ensuring availability, scalability, and operational efficiency. Involvement in topology design, equipment selection, technical documentation, and delivery of production-ready environments."
+    },
+    "tags": ["Redes", "Network Engineering", "Infraestrutura", "Topologia", "Projetos"],
+    "logo": "assets/experience/network.svg",
+    "org_url": null,
+    "url": null
+  }
+]

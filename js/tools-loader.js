@@ -1,7 +1,7 @@
 /* ============================================================
    almeidaoffsec — design-system / tools-loader.js
-   Renderiza cards de ferramentas a partir de um JSON central.
-   Para adicionar uma ferramenta nova: edite apenas
+   Renderiza cards de projetos a partir de um JSON central.
+   Para adicionar um projeto novo: edite apenas
    design-system/data/tools.json — nenhuma página precisa
    ser tocada manualmente.
 
@@ -10,7 +10,7 @@
      <script src=".../tools-loader.js"></script>
 
    data-limit (opcional): número máximo de cards exibidos.
-   Omita para mostrar todas as ferramentas (página /ferramentas/).
+   Omita para mostrar todos os projetos (página /projetos/).
 
    Suporte bilíngue: description pode ser string (legado) ou
    objeto { pt, en }. O idioma ativo é lido do localStorage.
@@ -60,7 +60,7 @@
         "<p>" + getDescription(tool) + "</p>" +
         '<div class="tags">' + tagsHtml + "</div>" +
         '<div class="hero__actions" style="margin-top:1.25rem;">' +
-          '<a class="btn-primary" href="' + tool.url + '"' + toolTarget + '>' + t("tool.card.cta", "Ver ferramenta") + '</a>' +
+          '<a class="btn-primary" href="' + tool.url + '"' + toolTarget + '>' + t("tool.card.cta", "Ver projeto") + '</a>' +
           '<a class="btn-secondary" href="' + tool.repo + '" target="_blank" rel="noopener">' + t("tool.card.repo", "Repositório") + '</a>' +
         "</div>" +
       "</div>"
@@ -87,7 +87,7 @@
       })
       .catch(function () {
         if (cachedContainer) {
-          cachedContainer.innerHTML = "<p>Não foi possível carregar as ferramentas agora. Tente novamente mais tarde.</p>";
+          cachedContainer.innerHTML = "<p>Não foi possível carregar os projetos agora. Tente novamente mais tarde.</p>";
         }
       });
   }

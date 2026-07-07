@@ -11,7 +11,7 @@
 
    Para marcar o link ativo do menu, defina no <body>:
      <body data-page="home">      -> Home
-     <body data-page="tools">     -> Ferramentas
+     <body data-page="tools">     -> Projetos
      <body data-page="writeups">  -> Writeups
      <body data-page="blog">      -> Blog
      <body data-page="about">     -> Sobre
@@ -21,9 +21,9 @@
 
   var NAV_LINKS = [
     { key: "home",     label: "Home",        href: "https://almeidaoffsec.com/" },
-    { key: "tools",    label: "Ferramentas", href: "https://almeidaoffsec.com/ferramentas/" },
     { key: "writeups", label: "Writeups",    href: "https://writeups.almeidaoffsec.com/" },
     { key: "blog",     label: "Blog",        href: "https://blog.almeidaoffsec.com/" },
+    { key: "tools",    label: "Projetos",    href: "https://almeidaoffsec.com/projetos/" },
     { key: "about",    label: "Sobre",       href: "https://almeidaoffsec.com/sobre.html" }
   ];
 
@@ -104,7 +104,7 @@
         '<div class="container">' +
           '<span class="site-footer__copy">&copy; ' + year + ' almeidaoffsec — Offensive Security</span>' +
           '<ul class="site-footer__links">' +
-            '<li><a href="https://almeidaoffsec.com/ferramentas/" data-i18n="footer.link.tools">Ferramentas</a></li>' +
+            '<li><a href="https://almeidaoffsec.com/projetos/" data-i18n="footer.link.tools">Projetos</a></li>' +
             '<li><a href="https://writeups.almeidaoffsec.com/" data-i18n="footer.link.writeups">Writeups</a></li>' +
             '<li><a href="https://blog.almeidaoffsec.com/" data-i18n="footer.link.blog">Blog</a></li>' +
           '</ul>' +

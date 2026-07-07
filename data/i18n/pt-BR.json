@@ -1,17 +1,17 @@
 {
   "nav.home":     "Home",
-  "nav.tools":    "Ferramentas",
+  "nav.tools":    "Projetos",
   "nav.writeups": "Writeups",
   "nav.blog":     "Blog",
   "nav.about":    "Sobre",
 
-  "footer.link.tools":    "Ferramentas",
+  "footer.link.tools":    "Projetos",
   "footer.link.writeups": "Writeups",
   "footer.link.blog":     "Blog",
 
   "lang.toggle": "EN",
 
-  "tool.hero.label":               "Ferramenta",
+  "tool.hero.label":               "Projeto",
   "tool.cta.github":               "Ver código no GitHub",
   "tool.section.context.label":    "Contexto",
   "tool.section.context.heading":  "O problema que resolve",
@@ -19,10 +19,25 @@
   "tool.section.usage.heading":    "Como usar",
   "tool.section.stack.label":      "Stack",
   "tool.section.stack.heading":    "Tecnologias",
-  "tool.card.cta":                 "Ver ferramenta",
+  "tool.card.cta":                 "Ver projeto",
   "tool.card.repo":                "Repositório",
 
   "tool.optional":                 "(opcional)",
 
-  "writeup.card.cta":              "Ler writeup →"
+  "writeup.card.cta":              "Ler writeup →",
+  "post.card.cta":                 "Ler post →",
+
+  "education.section.label":       "Formação",
+  "education.section.heading":     "Formação",
+  "education.status.completed":    "Concluído",
+  "education.status.in_progress":  "Em andamento",
+  "education.card.org":            "Ver organização →",
+  "education.card.cta":            "Ver certificado →",
+
+  "experience.section.label":      "Experiência",
+  "experience.section.heading":    "Experiência",
+  "experience.status.active":      "Ativo",
+  "experience.status.former":      "Anterior",
+  "experience.card.org":           "Ver plataforma →",
+  "experience.card.cta":           "Ver perfil →"
 }
