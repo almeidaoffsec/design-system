@@ -10,6 +10,6 @@
     "platform": "TryHackMe",
     "difficulty": "low",
     "tags": ["Linux", "Privilege Escalation", "Port Knocking", "Docker Escape"],
-    "date": "2024-05-20"
+    "date": "2026-07-06"
   }
 ]
