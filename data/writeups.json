@@ -6,7 +6,7 @@
       "pt": "Reconhecimento de portas, esteganografia em imagem, bypass de upload e escalada de privilégios.",
       "en": "Port reconnaissance, image steganography, upload bypass and privilege escalation."
     },
-    "url": "https://writeups.almeidaoffsec.com/writeups/tryhackme-cat-pictures/",
+    "url": "https://writeups.almeidaoffsec.com/writeups/thm-cat-pictures/",
     "platform": "TryHackMe",
     "difficulty": "low",
     "tags": ["Linux", "Steganography", "FTP", "File Upload"],
