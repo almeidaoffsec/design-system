@@ -3,8 +3,8 @@
     "title": "THM — Cat Pictures",
     "slug": "tryhackme-cat-pictures",
     "description": {
-      "pt": "Reconhecimento de portas, esteganografia em imagem, bypass de upload e escalada de privilégios.",
-      "en": "Port reconnaissance, image steganography, upload bypass and privilege escalation."
+      "pt": "Port knocking para liberar FTP, credenciais vazadas para um serviço de shell customizado, engenharia reversa de um binário com senha hardcoded para gerar chave SSH, e escape de container Docker via injeção em script d e limpeza executado pelo host.",
+      "en": "Port knocking to expose FTP, leaked credentials for a custom shell service, reverse engineering a binary with a hardcoded password to generate an SSH key, and a Docker container escape via injection into a cleanup script executed by the host."
     },
     "url": "https://writeups.almeidaoffsec.com/writeups/thm-cat-pictures/",
     "platform": "TryHackMe",
